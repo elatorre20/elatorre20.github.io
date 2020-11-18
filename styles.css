@@ -1,6 +1,8 @@
 /* CSS Document */
 
-body{ background-image: url("Images/Background/background.png");}
+@media only screen and (max-width:1080px){body{background:url('../image/bg2.jpg');}}
+
+@media only screen and (min-width:1081px){body{ background-image: url("Images/Background/background.png");}}
 
 h1{font: 2em andale-mono, monospace; color: black;}
 

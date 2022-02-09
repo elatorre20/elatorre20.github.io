@@ -25,6 +25,10 @@ li{font: 1.5em andale-mono, monospace; color: black;}
 	margin-left: 90px;
 }
 
+.maintext p a{
+	font: 1em andale-mono, monospace; color: black;
+}
+
 .maintext img{
 	border: solid; 
 	border-width: 3px; 

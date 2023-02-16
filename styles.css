@@ -1,5 +1,9 @@
 /* CSS Document */
-
+:root {
+	--background: rgba(122, 224, 255, 0.9);
+	--active: rgba(51, 102, 127, 0.9);
+	--border: rgba(10,10,10,0.9);
+}
 @media only screen and (max-width:1080px){body{background:url("Images/Background/backgroundMobile.png");}}
 
 @media only screen and (min-width:1081px){body{ background-image: url("Images/Background/background.png");}}
@@ -13,12 +17,12 @@ a{font: 1.5em andale-mono, monospace; color: black;}
 li{font: 1.5em andale-mono, monospace; color: black;}
 
 .maintext{
-	background: rgba(102, 204, 255, 0.3); 
+	background: var(--background); 
 	margin: 50px; 
 	padding: 50px; 
 	border: solid; 
 	border-width: 2px; 
-	border-color: rgba(0,0,0,0.5); 
+	border-color: var(--border); 
 }
 
 .maintext p.indented{
@@ -32,19 +36,19 @@ li{font: 1.5em andale-mono, monospace; color: black;}
 .maintext img{
 	border: solid; 
 	border-width: 3px; 
-	border-color: rgba(0,0,0,0.5);
+	border-color: var(--border);
 }
 
 .maintext img{
 	border: solid; 
 	border-width: 3px; 
-	border-color: rgba(0,0,0,0.5);
+	border-color: var(--border);
 }
 
 .maintext iframe{
 	border: solid; 
 	border-width: 3px; 
-	border-color: rgba(0,0,0,0.5);
+	border-color: var(--border);
 }
 
 p.indented a{
@@ -53,11 +57,11 @@ p.indented a{
 
 .menubar{
 	overflow: hidden; 
-	background-color:rgba(102, 204, 255, 0.3); 
+	background-color: var(--background); 
 	margin: 50px;  
 	border: solid; 
 	border-width: 2px; 
-	border-color: rgba(0,0,0,0.5); 
+	border-color: var(--border); 
 }
 
 .menubar a{
@@ -70,9 +74,9 @@ p.indented a{
 }
 
 .menubar a:hover{
-	background-color: rgba(51, 102, 127, 0.7);
+	background-color: var(--active);
 }
 
 .menubar a.active{
-	background-color: rgba(51, 102, 127, 0.7);
+	background-color: var(--active);
 }

@@ -61,12 +61,18 @@ p.indented a{
 }
 
 .menubar a{
-	float:left; 
 	color: black;
+    border-right: solid;
+    border-width: 2px; 
+	border-color: rgba(0,0,0,0.5); 
 	text-decoration: none;
 	text-align: center;
 	padding: 14px ;
 	font-size: 25px;
+}
+
+.menubar a.last{
+    border-right: none;
 }
 
 .menubar a:hover{

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <link href="styles.css" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="Images/Background/icon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="Images/Background/icon.ico"/>
+    
+    <script>
+        function setIframeHeight(iframe,elementName){
+            var elementHeight = iframe.contentWindow.document.getElementById(elementName).scrollHeight;
+            console.log(elementHeight);
+            iframe.style.height = String(elementHeight+21) + "px";
+        }
+    </script>
+    
+
+</head>
+
+<body>
+	
+	<div class="menubar">
+        <p><span style="font-size: 1.2em;">Emilio Latorre</span>
+        <a href="index.html">Home</a>
+		<a href="projects.html">Projects</a>
+		<a href="about.html">About</a>
+		<a class="last" href="contact.html">Contact</a>
+        </p>
+	</div>
+    
+    <div id="container" style="overflow:hidden; display: block; clip-path: inset(0 58px 0 58px)">
+    <iframe src="projects.html#project2" scrolling="no" onload="setIframeHeight(this,'project2')" onresize="setIframeHeight(this,'project2')" allowtransparency="true" style="border:none; width: 100%"></iframe>
+    </div>
+    
+    
+    
+    
+
+	
+</body>
+</html>

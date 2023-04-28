@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <title>Menu</title>
+    <link href="/styles.css" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/Images/Background/icon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/Images/Background/icon.ico"/>
+    
+    <script>
+        function setFrame(frame,container,elementName){
+            document.getElementById(container).innerHTML = frame.contentWindow.document.getElementById(elementName).innerHTML;
+        }
+        
+    </script>
+
+</head>
+
+<body>
+	
+    <div class="menubar" id="menu">
+        <p><span>Emilio Latorre</span>
+        <a href="/index.html">Home</a>
+        <a href="/feed.html">Projects</a>
+        <a href="/about.html">About</a>
+        <a class="last" href="/contact.html">Contact</a>
+        </p>
+    </div>
+	
+</body>
+</html>

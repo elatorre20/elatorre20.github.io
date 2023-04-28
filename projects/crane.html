@@ -1,15 +1,20 @@
 <!doctype html>
 <html>
 <head>
-    <link href="styles.css" rel="stylesheet">
+    <title>Crane Simulator</title>
+    <link href="/styles.css" rel="stylesheet">
 
-    <link rel="icon" type="image/x-icon" href="Images/Background/icon.ico"/>
-    <link rel="shortcut icon" type="image/x-icon" href="Images/Background/icon.ico"/>
+    <link rel="icon" type="image/x-icon" href="/Images/Background/icon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/Images/Background/icon.ico"/>
+    
+    
     <script>
         function setFrame(frame,container,elementName){
             document.getElementById(container).innerHTML = frame.contentWindow.document.getElementById(elementName).innerHTML;
         }
+        
     </script>
+    
 
 </head>
 
@@ -19,13 +24,10 @@
     </div>
     <!the iframe loads the a page to allow pulling only the desired div>
     <iframe id="iframe1" src="/menu.html"  onload="setFrame(this,'menu','menu')" allowtransparency="true" style="display: none"></iframe>
-	
-	<div class="maintext">
-		<center>
-			<h1>404 Error</h1>
-			<p>Sorry, the page you are looking for does not exist.</p>
-		</center>
-	</div>
+    
+    <div class="maintext" id="container">
+    </div>
+    <iframe id="iframe2" src="/feed.html"  onload="setFrame(this,'container','crane')" allowtransparency="true" style="display: none"></iframe>
 	
 </body>
 </html>

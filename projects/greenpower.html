@@ -1,15 +1,14 @@
 <!doctype html>
 <html>
 <head>
-    <title>Template</title>
+    <title>Greenpower Telemetry Module</title>
     <link href="/styles.css" rel="stylesheet">
 
-    <link rel="icon" type="image/x-icon" href="Images/Background/icon.ico"/>
-    <link rel="shortcut icon" type="image/x-icon" href="Images/Background/icon.ico"/>
+    <link rel="icon" type="image/x-icon" href="/Images/Background/icon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/Images/Background/icon.ico"/>
     
     
     <script>
-        //container is the name of the div on this page, elementname is the name of the div on the source page
         function setFrame(frame,container,elementName){
             document.getElementById(container).innerHTML = frame.contentWindow.document.getElementById(elementName).innerHTML;
         }
@@ -25,13 +24,11 @@
     </div>
     <!the iframe loads the a page to allow pulling only the desired div>
     <iframe id="iframe1" src="/menu.html"  onload="setFrame(this,'menu','menu')" allowtransparency="true" style="display: none"></iframe>
-	
-	<div class="maintext">
-		<center>
-			<h1>Template</h1>
-			<p>Lorem Ipsum Dolor Sit Amet</p>
-		</center>
-	</div>
+    
+    <div class="maintext" id="container">
+    </div>
+    <!the iframe loads the main projects page and allows for pulling the div with the desired project>
+    <iframe id="iframe2" src="/feed.html"  onload="setFrame(this,'container','greenpower')" allowtransparency="true" style="display: none"></iframe>
 	
 </body>
 </html>

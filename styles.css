@@ -3,31 +3,59 @@
 /*@media only screen and (max-width:1080px){body{background:url("Images/Background/backgroundMobile.png");}}
 
 @media only screen and (min-width:1081px){body{ background-image: url("Images/Background/background.png");}}*/
-body{background-image: linear-gradient(to bottom right, lightblue, darkblue)}
 
-h1{font: 2em andale-mono, monospace; color: black;}
+/*basic styling*/
+body{
+    background-image: linear-gradient(to bottom right, rgba(13,204,255,1), rgba(50,75,255,1));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: overlay;
+}
 
-p{font: 1.5em andale-mono, monospace; color: black;}
+h1{
+    font: 2.5vw andale-mono, monospace; 
+    color: black;
+}
 
-a{font: 1.5em andale-mono, monospace; color: black;}
+p{
+    font: 2vw andale-mono, monospace; 
+    color: black;
+}
 
-li{font: 1.5em andale-mono, monospace; color: black;}
+a{
+    font: 2vw andale-mono, monospace; 
+    color: black;
+}
 
+a:hover{
+	color: rgba(51, 102, 127, 0.7);
+}
+
+li{
+    font: 2vw andale-mono, monospace; 
+    color: black;
+}
+
+/*main text*/
 .maintext{
 	background: rgba(102, 204, 255, 0.3); 
-	margin: 50px; 
-	padding: 50px; 
+	margin: 4vw; 
+	padding-left: 4vw; 
+    padding-right: 4vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
 	border: solid; 
 	border-width: 2px; 
 	border-color: rgba(0,0,0,0.5); 
 }
 
 .maintext p.indented{
-	margin-left: 90px;
+	margin-left: 6vw;
 }
 
 .maintext p a{
-	font: 1em andale-mono, monospace; color: black;
+	font: 2vw andale-mono, monospace;
 }
 
 .maintext img{
@@ -40,7 +68,14 @@ li{font: 1.5em andale-mono, monospace; color: black;}
 	border: solid; 
 	border-width: 3px; 
 	border-color: rgba(0,0,0,0.5);
+    height:auto;
+    width:60%;  
 }
+@media only screen and (max-width:800px){
+    .maintext img{
+        width:100%;
+    }
+}  
 
 .maintext iframe{
 	border: solid; 
@@ -49,42 +84,66 @@ li{font: 1.5em andale-mono, monospace; color: black;}
 }
 
 p.indented a{
-	font: 1em andale-mono, monospace; color: black;
+	font: 2vw andale-mono, monospace;
 }
 
+/*menu bar*/
 .menubar{
 	overflow: hidden; 
 	background-color:rgba(102, 204, 255, 0.3); 
-	margin: 50px;  
+	margin: 4vw;  
 	border: solid; 
 	border-width: 2px; 
 	border-color: rgba(0,0,0,0.5); 
 }
 
 .menubar p{
-    @media only screen and (max-width:1080px){text-align: center;}
-    @media only screen and (min-width:1081px){text-align:left;}
+    text-align:left;
+}
+@media only screen and (max-width:800px){
+     .menubar p{
+          text-align: center;
+     }
+}
+
+.menubar span{
+    font-size: 2.5vw;
 }
 
 .menubar a{
-	color: black;
     border-right: solid;
     border-width: 2px; 
 	border-color: rgba(0,0,0,0.5); 
 	text-decoration: none;
 	text-align: center;
-	padding: 14px ;
-	font-size: 25px;
+	padding-left: 1vw ;
+    padding-right: 1vw;
+    font-size: 2vw;
 }
 
 .menubar a.last{
     border-right: none;
 }
 
-.menubar a:hover{
-	background-color: rgba(51, 102, 127, 0.7);
+
+/*scroll bar*/
+::-webkit-scrollbar {
+    width: 0.75vw;
+}
+@media only screen and (max-width:800px){
+     ::-webkit-scrollbar{
+          width: 1.5vw;
+     }
 }
 
-.menubar a.active{
-	background-color: rgba(51, 102, 127, 0.7);
+::-webkit-scrollbar-track {
+    display:none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.5);
 }

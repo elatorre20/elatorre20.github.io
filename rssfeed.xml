@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>Projects</title>
+		<description>Projects</description>
+		<pubDate>Sat, 24 Jun 2023 19:42:57 +0000</pubDate>
+		<link>http://emiliolatorre.dev/feed</link>
+		<atom:link href="http://fetchrss.com/rss/6497475549c7474ee96b6ec264974741d5853a2d7f15e1c2.xml" rel="self" type="application/rss+xml" />
+		<generator>https://fetchrss.com</generator>
+		<image>
+			<link>http://emiliolatorre.dev/feed</link>
+			<url>https://www.google.com/s2/favicons?domain=http://emiliolatorre.dev</url>
+			<title>Projects</title>
+		</image>
+
+		<item>
+			<title>Crane Simulator</title>
+			<link>https://github.com/elatorre20/Packet39-Crane-Simulator</link>
+			<description><![CDATA[<img src="http://emiliolatorre.dev/Images/Projects/CraneSim_Still.jpg"><br><br><p class="indented">This is a project I did over summer 2020 for a BU CS200 class taugh by XRTerra, with 2 classmates. We used the unity game engine to make the simulator, and most of the assets and all the scripting are done from scratch. I made all of the assets as well as some of the scripting and physics.<a href="https://github.com/elatorre20/Packet39-Crane-Simulator">You can download the latest build as well as source code on my github.</a></p>]]></description>
+			<pubDate>Sat, 24 Jun 2023 19:42:57 +0000</pubDate>
+			<media:content url="http://emiliolatorre.dev/Images/Projects/CraneSim_Still.jpg" medium="image" />
+			<guid isPermaLink="false">https://github.com/elatorre20/Packet39-Crane-Simulator</guid>
+		</item>
+		<item>
+			<title>Intel MCS-85 System Development Kit restoration</title>
+			<link>https://www.ricomputermuseum.org/collections-gallery/small-systems-at-ricm/intel-mcs-85</link>
+			<description><![CDATA[<img src="http://emiliolatorre.dev/Images/Projects/MCS_85.JPG" width="100%" height="auto"><br><br><p class="indented">I am attempting to restore and modify an intel systems development kit from the collection of the Rhode Island Computer Museum. The MCS-85 is a barebones kit sold by intel in the late 70s for hardware manufacturers to design systems around the 8085a processor. The kit provides 256 bytes of ram, a monitor loaded into ROM, and a rudimentary I/O system consisting of a 24-key keyboard and single-line 6-digit display. While this is theoretically enough to program the system, the kit is intended for the user to supply additional hardware to fit the needs of whatever they are designing. So far I have succeeded in adding a connection for a teleprinter terminal as well as an additional 256 bytes of ram. A more detailed look at the kit and restoration is available <a href="https://www.ricomputermuseum.org/collections-gallery/small-systems-at-ricm/intel-mcs-85">on the RICM website.</a> Thanks to the other volunteers at the museum for allowing me to use the collection and providing documentation and other help.</p>]]></description>
+			<pubDate>Sat, 24 Jun 2023 19:42:57 +0000</pubDate>
+			<media:content url="http://emiliolatorre.dev/Images/Projects/MCS_85.JPG" medium="image" width="100%" height="auto" />
+			<guid isPermaLink="false">https://www.ricomputermuseum.org/collections-gallery/small-systems-at-ricm/intel-mcs-85</guid>
+		</item>
+		<item>
+			<title>RICM PicoBoard</title>
+			<link>http://emiliolatorre.dev/feed</link>
+			<description><![CDATA[<img src="http://emiliolatorre.dev/Images/Projects/Pico.jpg" width="408" height="auto"><br><br><p class="indented">Over the summer of 2021, Dan Berman, curator at the Rhode Island Computer Museum, asked me to design a new kit for use in the Museum's "learn electronics" workshops for elementary-school children. After thinking about what hardware might be interesting for the project, I settled on a Raspberry Pi Pico, because of its low cost and the ability to program it directly in Python. Mike Thompson and I then designed and laid out a circuit board for the hardware I had selected, and we were able to construct several of the kits. The latest iteration costs only $20 for all components and the PCB, allowing us to provide the kit for workshops. Thanks to Dan Berman and RICM for funding the project and Mike Thompson for his help in laying out the board. </p>]]></description>
+			<pubDate>Sat, 24 Jun 2023 19:42:57 +0000</pubDate>
+			<media:content url="http://emiliolatorre.dev/Images/Projects/Pico.jpg" medium="image" width="408" height="auto" />
+			<guid isPermaLink="false">http://emiliolatorre.dev/feed</guid>
+		</item>
+
+	</channel>
+</rss>

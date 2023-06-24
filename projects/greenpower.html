@@ -22,13 +22,17 @@
 	
     <div class="menubar" id="menu">
     </div>
-    <!the iframe loads the a page to allow pulling only the desired div>
+    <!the iframe for loading the menu>
     <iframe id="iframe1" src="/menu.html"  onload="setFrame(this,'menu','menu')" allowtransparency="true" style="display: none"></iframe>
     
-    <div class="maintext" id="container">
-    </div>
-    <!the iframe loads the main projects page and allows for pulling the div with the desired project>
-    <iframe id="iframe2" src="/feed.html"  onload="setFrame(this,'container','greenpower')" allowtransparency="true" style="display: none"></iframe>
+    <div class="maintext" id="greenpower">
+		<h1><strong>F24 Greenpower Telemetry Board</strong></h1>
+		
+		<center><img src="/Images/Projects/Greenpower_Telemetry.jpg" width="408" height="auto" alt="The F24 GreenPower telemetry"></center>
+		
+		<p class="indented">In 2022, RICM began sponsoring several Rhode Island high schools in establishing a <a href = "https://greenpowerusa.net/f24-grades-6-12">Greenpower F24</a> electric gokart racing league. The primary purpose of the project is to give the students hands-on practice with fabrication, electronics, and mechanical engineering. The Greenpower foundation used to provide a <a href="https://www.greenpower.co.uk/product/340">telemetry kit</a> which measured important statsitics about the car, but as it was very expensive and not available in the US, the museum asked me to design a replacement. Using the original kit as a guide for requirements, I selected parts, designed and ordered a board, and assembled a prototype kit. The kit measures car telemetry statistics like battery level, motor current consumption, motor temperature, and acceleration. We also added additional hardware to display statistics to the driver, and to log data to an SD card for the students to use in redesigning the car. </p>
+	
+	</div>
 	
 </body>
 </html>

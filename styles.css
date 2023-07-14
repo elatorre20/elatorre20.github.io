@@ -14,17 +14,17 @@ body{
 }
 
 h1{
-    font: 2.5vw andale-mono, monospace; 
+    font: 2vw andale-mono, monospace; 
     color: black;
 }
 
 p{
-    font: 2vw andale-mono, monospace; 
+    font: 1.5vw andale-mono, monospace; 
     color: black;
 }
 
 a{
-    font: 2vw andale-mono, monospace; 
+    font: 1.5vw andale-mono, monospace; 
     color: black;
 }
 
@@ -33,7 +33,7 @@ a:hover{
 }
 
 li{
-    font: 2vw andale-mono, monospace; 
+    font: 1.5vw andale-mono, monospace; 
     color: black;
 }
 
@@ -55,7 +55,7 @@ li{
 }
 
 .maintext p a{
-	font: 2vw andale-mono, monospace;
+	font: 1.5vw andale-mono, monospace;
 }
 
 .maintext img{
@@ -84,7 +84,7 @@ li{
 }
 
 p.indented a{
-	font: 2vw andale-mono, monospace;
+	font: 1.5vw andale-mono, monospace;
 }
 
 /*menu bar*/
@@ -124,21 +124,19 @@ p.indented a{
 /*scroll bar*/
 ::-webkit-scrollbar {
     width: 0.75vw;
+    background-color: rgba(0,0,50,0.4);
 }
 @media only screen and (max-width:800px){
      ::-webkit-scrollbar{
-          width: 1.5vw;
+        width: 1.5vw;
+        background-color: rgba(0,0,50,0.4);
      }
 }
 
-::-webkit-scrollbar-track {
-    display:none;
-}
-
 ::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,50,0.3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,50,0.5);
 }

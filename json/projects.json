@@ -15,6 +15,13 @@
         "imagetext"     : "<center><iframe width=\"423\" height=\"752\" src=\"https://www.youtube.com/embed/0obDkaDrO4o\" title=\"Antikythera Mechanism Replica Demo\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe><img src=\"/Images/Projects/Antikythera1.jpg\" style=\"width:auto; height:752px\" alt=\"The front of the completed mechanism\"></center>"
     },
     {
+        "id"            : "gear",
+        "title"         : "K-Line Gear Indicator",
+        "categories"    : ["programming, electronics"],
+        "bodytext"      : "This is a gear indicator for my 2006 Suzuki V-Strom DL650. I had seen several versions of this on the internet, but they all used an ELM327. As the motorcycle is quite old, the diagnostic port uses K-Line instead of CANBus/OBDII, which is just a half-duplex UART. I interfaced this to the hardware serial port of an Arduino through a level shifter, and this allowed the Arduino to read the engine diagnostic port directly. For a display solution I put an I2C OLED display in the RPM gauge. Code and circuit diagrams are <a href=\"https://github.com/elatorre20/vstrom-ecu-reader\">available on github</a>.",
+        "imagetext"     : "<center><img src=\"/Images/Projects/Gear1.jpg\" style=\"width:40%; height:auto\" alt=\"The gear indicator in the RPM gauge showing neutral\"><img src=\"/Images/Projects/Gear2.jpg\" style=\"width:23%; height:auto\" alt=\"The gear indicator level shifter board\"></center>"
+    },
+    {
         "id"            : "crane",
         "title"         : "Crane Simulator",
         "categories"    : ["programming", "cad"],

@@ -10,7 +10,6 @@ function formatCategoryLabel(category){
 function createFilterBar(categories, selectedCategory){
     const filterBar = $(
         '<div class="filterbar" aria-label="Project filters">' +
-            '<span class="filterbar__label">Filter by tag</span>' +
             '<div class="filterbar__options" role="group" aria-label="Project tag filters"></div>' +
         '</div>'
     );

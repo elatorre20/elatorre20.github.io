@@ -170,6 +170,27 @@ p.indented a {
     box-shadow: 0 10px 20px -16px rgba(4, 17, 46, 0.7);
 }
 
+.publication-entry {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.publication-entry h2 {
+    margin-bottom: 0;
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+}
+
+.publication-citation,
+.publication-note {
+    margin-bottom: 0;
+}
+
+.publication-iframe {
+    width: 100%;
+    min-height: 70vh;
+    background: rgba(255, 255, 255, 0.55);
+}
+
 .menubar {
     margin-top: 1.5rem;
     padding: 0.9rem 1.2rem;

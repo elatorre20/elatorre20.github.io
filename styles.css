@@ -129,6 +129,20 @@ p.indented a {
     width: min(100%, 60%);
 }
 
+.project-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-block: 1rem 1.5rem;
+    text-align: center;
+}
+
+.project-media--stack {
+    flex-direction: column;
+    align-items: center;
+}
+
 .hero {
     text-align: center;
     padding-block: clamp(2rem, 6vw, 4.5rem);
@@ -216,8 +230,8 @@ p.indented a {
     gap: 0.65rem;
 }
 
-.filterbar__option,
-.project-tag {
+
+.filterbar__option {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -228,9 +242,6 @@ p.indented a {
     background: rgba(255, 255, 255, 0.14);
     color: var(--text);
     font: inherit;
-}
-
-.filterbar__option {
     cursor: pointer;
     transition: color 180ms ease, background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
 }
@@ -246,32 +257,6 @@ p.indented a {
 .filterbar__option.is-selected {
     border-color: rgba(5, 18, 43, 0.24);
     font-weight: 700;
-}
-
-.project-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.project-header h1 {
-    margin-bottom: 0;
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 0.55rem;
-}
-
-.project-tag {
-    min-height: 2.2rem;
-    padding-inline: 0.8rem;
-    font-size: 0.92rem;
-    color: var(--muted);
 }
 
 .menubar nav {
@@ -344,16 +329,6 @@ p.indented a {
 
     .menubar a {
         flex: 1 1 calc(50% - 0.5rem);
-    }
-
-    .filterbar__label,
-    .filterbar__options,
-    .project-tags {
-        width: 100%;
-    }
-
-    .project-tags {
-        justify-content: flex-start;
     }
 
     .maintext {

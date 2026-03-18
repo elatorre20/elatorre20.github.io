@@ -3,20 +3,6 @@ function setFrame(frame,container,elementName){
     document.getElementById(container).innerHTML = frame.contentWindow.document.getElementById(elementName).innerHTML;
 }
 
-function normalizeCategories(categories){
-    if (Array.isArray(categories)) {
-        return categories
-            .flatMap((category) => String(category).split(','))
-            .map((category) => category.trim().toLowerCase())
-            .filter(Boolean);
-    }
-
-    return String(categories || '')
-        .split(',')
-        .map((category) => category.trim().toLowerCase())
-        .filter(Boolean);
-}
-
 function formatCategoryLabel(category){
     return category.charAt(0).toUpperCase() + category.slice(1);
 }
@@ -47,13 +33,39 @@ function createFilterBar(categories, selectedCategory){
     return filterBar;
 }
 
+function renderMediaItem(item){
+    if (item.kind === 'iframe') {
+        const allowfullscreen = item.allowfullscreen ? ' allowfullscreen' : '';
+        const allow = item.allow ? ` allow="${item.allow}"` : '';
+        const frameborder = item.frameborder ? ` frameborder="${item.frameborder}"` : '';
+        const width = item.width ? ` width="${item.width}"` : '';
+        const height = item.height ? ` height="${item.height}"` : '';
+
+        return `<iframe src="${item.src}" title="${item.title || ''}"${width}${height}${frameborder}${allow}${allowfullscreen}></iframe>`;
+    }
+
+    const style = item.style ? ` style="${item.style}"` : '';
+    const width = item.width ? ` width="${item.width}"` : '';
+    const height = item.height ? ` height="${item.height}"` : '';
+
+    return `<img src="${item.src}" alt="${item.alt || ''}"${style}${width}${height}>`;
+}
+
+function renderContentBlock(block){
+    if (block.type === 'media') {
+        const layoutClass = block.layout === 'stack' ? ' project-media--stack' : '';
+        const items = block.items.map(renderMediaItem).join('');
+        return `<div class="project-media${layoutClass}">${items}</div>`;
+    }
+
+    const className = block.className ? ` class="${block.className}"` : '';
+    return `<p${className}>${block.html}</p>`;
+}
+
 //function to import project data from json file using jquery
 function renderPage(page_category = 'all'){
     $.getJSON('/json/projects.json', function(data){//import json data
-        const projects = data.projects.map((project) => ({
-            ...project,
-            categories: normalizeCategories(project.categories)
-        }));
+        const projects = data.projects;
         const categories = [...new Set(projects.flatMap((project) => project.categories))].sort();
 
         $('.filterbar, .maintext').remove();
@@ -61,26 +73,20 @@ function renderPage(page_category = 'all'){
 
         projects.forEach((project) => {
             if (page_category === 'all' || project.categories.includes(page_category)) {
-                addProject(project.id, project.title, project.categories, project.bodytext, project.imagetext); //for each project render and append
+                addProject(project.id, project.title, project.content); //for each project render and append
             }
         });
     });
 }
 
 //function to append a div for a project with imported data
-function addProject(id, title, categories, bodytext, imagetext){
-    const categoryChips = categories
-        .map((category) => `<span class="project-tag">${formatCategoryLabel(category)}</span>`)
-        .join('');
+function addProject(id, title, content){
+    const renderedContent = content.map(renderContentBlock).join('');
 
     $('body').append(`
     <div class="maintext" id="${id}">
-        <div class="project-header">
-            <h1><strong>${title}</strong></h1>
-            <div class="project-tags" aria-label="Project tags">${categoryChips}</div>
-        </div>
-		${imagetext}
-        <p class="indented">${bodytext}</p>
-	</div>
+        <h1><strong>${title}</strong></h1>
+        ${renderedContent}
+    </div>
     `);
 }

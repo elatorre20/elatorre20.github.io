@@ -83,7 +83,8 @@ main {
 }
 
 .maintext,
-.menubar {
+.menubar,
+.filterbar {
     position: relative;
     width: var(--content-width);
     margin-inline: auto;
@@ -126,6 +127,20 @@ p.indented a {
 .maintext img {
     height: auto;
     width: min(100%, 60%);
+}
+
+.project-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-block: 1rem 1.5rem;
+    text-align: center;
+}
+
+.project-media--stack {
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero {
@@ -191,6 +206,59 @@ p.indented a {
     border-radius: calc(var(--radius) + 0.25rem);
 }
 
+.filterbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+    margin: 1rem auto 0;
+    padding: 1rem 1.2rem;
+    border-radius: calc(var(--radius) + 0.1rem);
+}
+
+.filterbar__label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.filterbar__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+}
+
+
+.filterbar__option {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.5rem;
+    padding: 0.5rem 0.95rem;
+    border: 1px solid rgba(5, 18, 43, 0.14);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--text);
+    font: inherit;
+    cursor: pointer;
+    transition: color 180ms ease, background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.filterbar__option:hover,
+.filterbar__option:focus-visible,
+.filterbar__option.is-selected {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px -16px rgba(4, 17, 46, 0.7);
+}
+
+.filterbar__option.is-selected {
+    border-color: rgba(5, 18, 43, 0.24);
+    font-weight: 700;
+}
+
 .menubar nav {
     display: flex;
     flex-wrap: wrap;
@@ -240,6 +308,11 @@ p.indented a {
     }
 
     .menubar {
+        margin-top: 0.75rem;
+        padding: 0.85rem;
+    }
+
+    .filterbar {
         margin-top: 0.75rem;
         padding: 0.85rem;
     }

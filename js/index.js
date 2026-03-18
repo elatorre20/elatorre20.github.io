@@ -33,6 +33,29 @@ function createFilterBar(categories, selectedCategory){
     return filterBar;
 }
 
+function parseProjectDate(dateTag){
+    const [month, year] = String(dateTag || '01/1970').split('/').map(Number);
+    return {
+        month: Number.isFinite(month) ? month : 1,
+        year: Number.isFinite(year) ? year : 1970
+    };
+}
+
+function compareProjectsByDate(leftProject, rightProject){
+    const leftDate = parseProjectDate(leftProject.date);
+    const rightDate = parseProjectDate(rightProject.date);
+
+    if (leftDate.year !== rightDate.year) {
+        return rightDate.year - leftDate.year;
+    }
+
+    if (leftDate.month !== rightDate.month) {
+        return rightDate.month - leftDate.month;
+    }
+
+    return leftProject.originalIndex - rightProject.originalIndex;
+}
+
 function renderMediaItem(item){
     if (item.kind === 'iframe') {
         const allowfullscreen = item.allowfullscreen ? ' allowfullscreen' : '';
@@ -65,7 +88,9 @@ function renderContentBlock(block){
 //function to import project data from json file using jquery
 function renderPage(page_category = 'all'){
     $.getJSON('/json/projects.json', function(data){//import json data
-        const projects = data.projects;
+        const projects = data.projects
+            .map((project, originalIndex) => ({ ...project, originalIndex }))
+            .sort(compareProjectsByDate);
         const categories = [...new Set(projects.flatMap((project) => project.categories))].sort();
 
         $('.filterbar, .maintext').remove();

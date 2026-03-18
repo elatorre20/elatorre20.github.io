@@ -170,6 +170,21 @@ p.indented a {
     box-shadow: 0 10px 20px -16px rgba(4, 17, 46, 0.7);
 }
 
+.publication-list {
+    margin: 0;
+    padding-left: 2rem;
+}
+
+.publication-entry {
+    color: var(--muted);
+    line-height: 1.8;
+    padding-left: 0.35rem;
+}
+
+.publication-entry a {
+    font-size: inherit;
+}
+
 .menubar {
     margin-top: 1.5rem;
     padding: 0.9rem 1.2rem;

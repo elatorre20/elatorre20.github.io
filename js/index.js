@@ -4,6 +4,10 @@ function setFrame(frame,container,elementName){
 }
 
 function formatCategoryLabel(category){
+    if (category.toLowerCase() === 'cad') {
+        return 'CAD';
+    }
+
     return category.charAt(0).toUpperCase() + category.slice(1);
 }
 

@@ -59,6 +59,38 @@ function compareProjectsByDate(leftProject, rightProject){
     return leftProject.originalIndex - rightProject.originalIndex;
 }
 
+const PINNED_PROJECT_ORDER = [
+    'antikythera',
+    'gear',
+    'ysi-weather-station'
+];
+
+function getPinnedProjectRank(projectId){
+    const rank = PINNED_PROJECT_ORDER.indexOf(projectId);
+    return rank === -1 ? Number.POSITIVE_INFINITY : rank;
+}
+
+function compareProjects(leftProject, rightProject){
+    const leftPinnedRank = getPinnedProjectRank(leftProject.id);
+    const rightPinnedRank = getPinnedProjectRank(rightProject.id);
+    const leftIsPinned = Number.isFinite(leftPinnedRank);
+    const rightIsPinned = Number.isFinite(rightPinnedRank);
+
+    if (leftIsPinned && rightIsPinned) {
+        return leftPinnedRank - rightPinnedRank;
+    }
+
+    if (leftIsPinned) {
+        return -1;
+    }
+
+    if (rightIsPinned) {
+        return 1;
+    }
+
+    return compareProjectsByDate(leftProject, rightProject);
+}
+
 function renderMediaItem(item){
     if (item.kind === 'iframe') {
         const allowfullscreen = item.allowfullscreen ? ' allowfullscreen' : '';
@@ -93,7 +125,7 @@ function renderPage(page_category = 'all'){
     $.getJSON('/json/projects.json', function(data){//import json data
         const projects = data.projects
             .map((project, originalIndex) => ({ ...project, originalIndex }))
-            .sort(compareProjectsByDate);
+            .sort(compareProjects);
         const categories = [...new Set(projects.flatMap((project) => project.categories))].sort();
 
         $('.filterbar, .maintext').remove();

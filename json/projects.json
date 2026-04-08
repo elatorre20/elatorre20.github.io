@@ -1,6 +1,93 @@
 {
     "projects": [
         {
+            "id": "stained-glass-window-replica",
+            "title": "Stained Glass Window Replica",
+            "categories": [
+                "art",
+                "cad",
+                "fabrication"
+            ],
+            "content": [
+                {
+                    "type": "media",
+                    "layout": "center",
+                    "items": [
+                        {
+                            "kind": "image",
+                            "src": "/Images/Projects/stained_glass_window.jpg",
+                            "alt": "A 2/3 scale replica of a historic stained glass window",
+                            "style": "width:60%; height:auto"
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "className": "indented",
+                    "html": "I grew up in a house that used to be a church rectory, and in the hallway outside my room there is a beautiful 100 year old stained glass window. As an anniversary gift to my parents, I created a 2/3 scale replica of it. The panes are pearlescent acrylic, and the designs in the dark blue panes were etched with a laser cutter and filled with gold enamel paint. The glazing is made of laser-cut plywood and stained with translucent food dye to give a nice color without overwhelming the grain of the top veneer. The frame is made of oak trim salvaged during renovations in the same house. When held up to the light, the colors almost match the original."
+                }
+            ],
+            "date": "04/2026"
+        },
+        {
+            "id": "brass-butterfly-brooch",
+            "title": "Brass Butterfly Brooch",
+            "categories": [
+                "art",
+                "fabrication",
+                "cad"
+            ],
+            "content": [
+                {
+                    "type": "media",
+                    "layout": "center",
+                    "items": [
+                        {
+                            "kind": "image",
+                            "src": "/Images/Projects/butterfly_brooch.jpg",
+                            "alt": "A brass butterfly brooch with geometric lattice wings",
+                            "style": "width:50%; height:auto"
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "className": "indented",
+                    "html": "For my last high school reunion, there was a black tie dinner. I had worn a tux exactly twice before, for my junior and senior proms, and the same one was hanging in my closet. On the last occasion I had worn a brooch of a butterfly instead of a traditional boutonniere. That one was long gone, but it was a nice starting point for a unique new item of jewelry. In Onshape I imported a photo of a blue Ulysses butterfly and traced the outline in a relatively blocky shape. I then freehanded a lattice of cells inside the wings in a pattern evocative of the real thing but stylized with sharp angles. I was lucky enough to have access to a waterjet cutter, and using an eye-wateringly expensive amount of garnet I cut the shape out of a sheet of 1/16th inch brass. I wire brushed it to a shiny finish and screwed it to a binder clip for a hanger."
+                }
+            ],
+            "date": "04/2026"
+        },
+        {
+            "id": "vdo-clock",
+            "title": "1986 VDO Clock",
+            "categories": [
+                "fabrication",
+                "art",
+                "electronics"
+            ],
+            "content": [
+                {
+                    "type": "media",
+                    "layout": "center",
+                    "items": [
+                        {
+                            "kind": "image",
+                            "src": "/Images/Projects/vdo_clock.jpg",
+                            "alt": "A 1986 VDO tachometer converted into a clock",
+                            "style": "width:60%; height:auto"
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "className": "indented",
+                    "html": "My father is a big fan of vintage German cars. I was searching for something Porsche-themed to get him for Christmas a few years ago when I came across this tachometer from a 1986 Mercedes S-class. I immediately thought it would make a great clock face, given that it redlines at 60 and already has a clock. I hooked it up to 12v which takes care of the hour and minute hand. For the second hand, I connected the tachometer input through a level shifter to a PWM pin on a microcontroller. By sweeping the frequency from 0-750Hz (8-cylinder engine) over the course of a minute, I got it to glide smoothly from 0-60."
+                }
+            ],
+            "date": "04/2026"
+        },
+        {
             "id": "digital-horn-flight-stick-shift",
             "title": "Digital Horn With Flight Stick Shift",
             "categories": [

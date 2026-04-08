@@ -1,6 +1,41 @@
 {
     "projects": [
         {
+            "id": "digital-horn-flight-stick-shift",
+            "title": "Digital Horn With Flight Stick Shift",
+            "categories": [
+                "electronics",
+                "fabrication",
+                "programming"
+            ],
+            "content": [
+                {
+                    "type": "media",
+                    "layout": "center",
+                    "items": [
+                        {
+                            "kind": "image",
+                            "src": "/Images/Projects/gear_shift_horn1.jpg",
+                            "alt": "A fabricated flight stick shift knob installed in a WRX",
+                            "style": "width:32%; height:auto"
+                        },
+                        {
+                            "kind": "image",
+                            "src": "/Images/Projects/gear_shift_horn2.jpg",
+                            "alt": "The custom electronics and horn controls built into the flight stick shifter",
+                            "style": "width:32%; height:auto"
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "className": "indented",
+                    "html": "My second car was a 2010 WRX. I loved it, and while I wanted to keep the mechanicals completely stock, I wanted to add something personal to it. I started off with a flight stick controller thinking it could just be a cool shift knob. Once I started fabricating it, I thought that the buttons might have another use. I squeezed an IO expander inside the handle and connected it to the controller's original buttons. Using shielded cable with aviation connectors and a low clock speed, I was able to get the I2C connection working even over 1 meter of cable in the noisy environment of a car. Using a Pi Pico, I read the buttons from the flight stick and used them to trigger audio files from an SD card on a serial-controlled MP3 module. I then boxed that up with an amplifier and wired it to a speaker right next to the car's original horn. With the press of a few buttons, the car now had a vintage klaxon and la cucaracha as well as the regular horn blast."
+                }
+            ],
+            "date": "04/2026"
+        },
+        {
             "id": "ysi-weather-station",
             "title": "YSI Weather Station",
             "categories": [

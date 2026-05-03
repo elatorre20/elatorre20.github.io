@@ -60,6 +60,7 @@ function compareProjectsByDate(leftProject, rightProject){
 }
 
 const PINNED_PROJECT_ORDER = [
+    'cr10-s-3d-printer-digital-twin',
     'antikythera',
     'gear',
     'ysi-weather-station'

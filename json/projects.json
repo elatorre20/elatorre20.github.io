@@ -1,6 +1,40 @@
 {
     "projects": [
         {
+            "id": "cr10-s-3d-printer-digital-twin",
+            "title": "CR10-S 3D Printer Digital Twin",
+            "categories": [
+                "programming",
+                "cad",
+                "electronics"
+            ],
+            "content": [
+                {
+                    "type": "media",
+                    "layout": "center",
+                    "items": [
+                        {
+                            "kind": "iframe",
+                            "src": "https://www.youtube.com/embed/bc2iy-aErKM?si=4x6Bg0xgpnhKtL9L",
+                            "title": "CR10-S 3D Printer Digital Twin Demo",
+                            "width": "560",
+                            "height": "315",
+                            "frameborder": "0",
+                            "allow": "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+                            "referrerpolicy": "strict-origin-when-cross-origin",
+                            "allowfullscreen": true
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "className": "indented",
+                    "html": "For a class in the spring 2026 semester, I implemented a fully integrated, live state-synchronized digital twin of my 3D printer. This system allows real-time, spatially accurate remote visualization of the printer as it is running. The printer is a modified Creality CR10-S with a BTT Octopus Pro motherboard and an ESP32 installed in an expansion header. The printer is setup to emit telemetry of position and temperatures on its serial ports at a rate of 1Hz through M154/M155. The ESP32 is connected to one of the motherboard's serial ports, and exposes a telnet connection on the local network. A Python script running on another machine connects to the ESP32, receives and parses the telemetry, and publishes it in formatted JSON to an MQTT broker. The digital twin itself runs in a Unity app on a PC. The Unity app connects to the MQTT broker and subscribes to the telemetry topics. The incoming telemetry is then used to move the digital printer geometry to match the position of the real printer. Temperature telemetry is used to calculate deviation from programmed temperature for both the bed and extruder, which is represented by changing the material color of each respectively. The position of the extruder is tracked with a series of colored dots, which over the course of the print build up the shape of the printed object. The digital twin can also publish G-code commands to the broker, which are subscribed by the Python script and then passed on to the ESP32 and subsequently to the printer."
+                }
+            ],
+            "date": "05/2026"
+        },
+        {
             "id": "stained-glass-window-replica",
             "title": "Stained Glass Window Replica",
             "categories": [

@@ -143,6 +143,36 @@
             "date": "05/2026"
         },
         {
+            "id": "cnc-milling-ml-thesis",
+            "title": "Real-Time Cutting Parameter Inference and Feed Rate Modulation by Machine Learning in CNC Milling of Wood (Master's Thesis)",
+            "categories": [
+                "programming",
+                "cad",
+                "fabrication",
+                "electronics"
+            ],
+            "content": [
+                {
+                    "type": "media",
+                    "layout": "center",
+                    "items": [
+                        {
+                            "kind": "image",
+                            "src": "/Images/Projects/router_sensors.jpg",
+                            "alt": "A CNC router fitted with sensors for real-time cutting parameter inference",
+                            "style": "width:60%; height:auto"
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "className": "indented",
+                    "html": "In April 2026, I successfully defended my Master's Thesis at Northeastern University as a part of my degree in Cyber-Physical Systems. My thesis project was to develop a motion control system for a CNC mill to automate feed rate setting while cutting wood, using feedback from a sensor constellation and a machine learning model. I built a sensor system encompassing three accelerometers, two current sensors, and two microphones, driven by an RP2350 microcontroller. I built a board to connect all of these and then wired the sensors to the mill. I then wrote C++ firmware for the RP2350 to stream data from these sensors to a PC at a rate of 1KHz for acceleration and current and 40KHz for Audio. After collecting a significant training set of this data, I manually categorized it into optimal or sub-optimal cut quality. I then used this training set to perform supervised learning on a machine learning model. The model is then able to infer cut quality from incoming live sensor data, determining if the current feed rate is set optimally with an inference time consistently below 2 milliseconds and with 94% accuracy. These inferences are then fed into a proportional-derivative controller, which modulates the feed rate of the mill to keep the cutting parameters optimally. The final system was able to generate optimal cuts in pine wood even when the feed rates set in the G-code were significantly too high and would normally have resulted in a poor quality cut. <a href=\"/publications.html\">The published PDF of the thesis can be downloaded on the publications page.</a>"
+                }
+            ],
+            "date": "04/2026"
+        },
+        {
             "id": "stained-glass-window-replica",
             "title": "Stained Glass Window Replica",
             "categories": [

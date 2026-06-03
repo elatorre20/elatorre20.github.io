@@ -1,6 +1,34 @@
 {
     "projects": [
         {
+            "id": "cnc-mill-class-part",
+            "title": "CNC Mill Class Part",
+            "categories": [
+                "cad",
+                "fabrication"
+            ],
+            "content": [
+                {
+                    "type": "media",
+                    "layout": "center",
+                    "items": [
+                        {
+                            "kind": "image",
+                            "src": "/Images/Projects/a2_hex.jpg",
+                            "alt": "A completed CNC mill class hexagonal machined part",
+                            "style": "width:60%; height:auto"
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "className": "indented",
+                    "html": "This is the part that my students make in my Introduction to CNC Milling class at Artisan's Asylum. In the first session of the class, they go over basic machine operation and setup by squaring up a rectangular piece of stock. In the second, they go over work coordinate systems and offsets by drilling holes in the rectangular block. In the third session, they copy this part. We cover offsets and tool changes for using multiple tools in one part, CAM for operations including facing, 2d contouring, 3d surfacing and text engraving, and aligning a part through multiple workholding setups. The part starts off with 1.5\" hex bar stock rough sawn to length. The operations involved begin with facing the stock and then cutting the lower and upper steps of the hexagon with 2d contours using a 1/2\" endmill. Next, they move on to cutting fillet with a 3d surfacing operation using a 1/4\" ball endmill. Then they move on to engraving the text using a 1/8\" 30 degree vee engraving cutter. The final operation is to remove the part from the vise, flip it over and redo the offsets, and face off the remainder of the rough stock from the bottom of the part. This is the example that I completed myself for the students to use as a reference. All the hexagonal faces are within +0.002\" -0.000\" of the drawing spec."
+                }
+            ],
+            "date": "06/2026"
+        },
+        {
             "id": "embedded-cpp-3d-rendering-engine",
             "title": "Embedded C++ 3D Rendering Engine",
             "categories": [

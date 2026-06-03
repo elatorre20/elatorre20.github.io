@@ -91,6 +91,14 @@ function compareProjects(leftProject, rightProject){
 }
 
 function renderMediaItem(item){
+    if (item.kind === 'group') {
+        const className = item.className ? ` class="${item.className}"` : '';
+        const style = item.style ? ` style="${item.style}"` : '';
+        const items = item.items.map(renderMediaItem).join('');
+
+        return `<div${className}${style}>${items}</div>`;
+    }
+
     if (item.kind === 'iframe') {
         const allowfullscreen = item.allowfullscreen ? ' allowfullscreen' : '';
         const allow = item.allow ? ` allow="${item.allow}"` : '';
@@ -101,18 +109,20 @@ function renderMediaItem(item){
         return `<iframe src="${item.src}" title="${item.title || ''}"${width}${height}${frameborder}${allow}${allowfullscreen}></iframe>`;
     }
 
+    const className = item.className ? ` class="${item.className}"` : '';
     const style = item.style ? ` style="${item.style}"` : '';
     const width = item.width ? ` width="${item.width}"` : '';
     const height = item.height ? ` height="${item.height}"` : '';
 
-    return `<img src="${item.src}" alt="${item.alt || ''}"${style}${width}${height}>`;
+    return `<img src="${item.src}" alt="${item.alt || ''}"${className}${style}${width}${height}>`;
 }
 
 function renderContentBlock(block){
     if (block.type === 'media') {
         const layoutClass = block.layout === 'stack' ? ' project-media--stack' : '';
+        const blockClass = block.className ? ` ${block.className}` : '';
         const items = block.items.map(renderMediaItem).join('');
-        return `<div class="project-media${layoutClass}">${items}</div>`;
+        return `<div class="project-media${layoutClass}${blockClass}">${items}</div>`;
     }
 
     const className = block.className ? ` class="${block.className}"` : '';

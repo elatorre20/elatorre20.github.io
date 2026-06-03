@@ -1,6 +1,52 @@
 {
     "projects": [
         {
+            "id": "aluminum-lego-bricks",
+            "title": "Aluminum Lego Bricks",
+            "categories": [
+                "cad",
+                "fabrication"
+            ],
+            "content": [
+                {
+                    "type": "media",
+                    "layout": "center",
+                    "className": "project-media--lego-bricks",
+                    "items": [
+                        {
+                            "kind": "image",
+                            "src": "/Images/Projects/legos_stack.jpg",
+                            "alt": "A stack of machined aluminum Lego 2x4 bricks",
+                            "className": "project-media__lego-stack"
+                        },
+                        {
+                            "kind": "group",
+                            "className": "project-media__lego-detail",
+                            "items": [
+                                {
+                                    "kind": "image",
+                                    "src": "/Images/Projects/legos_top.jpg",
+                                    "alt": "Top view of machined aluminum Lego 2x4 bricks"
+                                },
+                                {
+                                    "kind": "image",
+                                    "src": "/Images/Projects/legos_bottom.jpg",
+                                    "alt": "Bottom view of machined aluminum Lego 2x4 bricks",
+                                    "className": "project-media__lego-bottom"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "className": "indented",
+                    "html": "I machined these Lego 2x4 bricks to practice precision with multiple tool and multiple setup parts before teaching my class at Artisan's Asylum on the CNC mill. The original CAD file is taken from LeoCAD and matches exactly the specified dimensions of a Lego 2x4 Brick. The bricks were milled in two setups. Firstly, rough cut 6061 stock was held in dovetail vise jaws. The outline of the brick and bottom face were cut with a 1/2\" end mill. After that, 1/8\", 3/32, and finally 0.040\" endmills were used to clear out the bottom cavity of the brick. After this, the brick was turned over and placed on parallels in the vise. The top face was cut with the 1/2\" end mill, and the 1/8 and 3/32 end mills were used to contour the studs. The final brick is of sufficiently high tolerance to achieve an interference fit with real ABS Lego bricks. All dimensions are to within +0mm -0.1mm. There is a slight misalignment of less than 0.05mm, as measured with a surface plate and feeler gauges, between the top and bottom setups. This is likely due to the lack of rigidity in the endstop that I used to locate the bricks in the second setup. If I were top do these again I would probably create some type of purpose-built fixture to locate the parts more precisely for the second setup."
+                }
+            ],
+            "date": "06/2026"
+        },
+        {
             "id": "cnc-mill-class-part",
             "title": "CNC Mill Class Part",
             "categories": [

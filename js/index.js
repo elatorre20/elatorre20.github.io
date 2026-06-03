@@ -60,6 +60,7 @@ function compareProjectsByDate(leftProject, rightProject){
 }
 
 const PINNED_PROJECT_ORDER = [
+    'cnc-milling-ml-thesis',
     'cr10-s-3d-printer-digital-twin',
     'antikythera'
 ];

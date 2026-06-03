@@ -226,8 +226,40 @@ p.indented a {
     padding-left: 0.35rem;
 }
 
+.publication-entry + .publication-entry {
+    margin-top: 1.25rem;
+}
+
+.publication-entry p {
+    margin-bottom: 0.55rem;
+}
+
 .publication-entry a {
     font-size: inherit;
+}
+
+.publication-download {
+    margin-bottom: 0;
+}
+
+.publication-download a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid rgba(5, 18, 43, 0.14);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--text);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.publication-download a:hover,
+.publication-download a:focus-visible {
+    background: var(--hover);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px -16px rgba(4, 17, 46, 0.7);
 }
 
 .menubar {
